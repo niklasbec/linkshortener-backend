@@ -15,9 +15,9 @@ router.post("/link", async (req, res) => {
     });
     try {
       const savedUrl = await newUrl.save();
-      res.send({ url: savedUrl.ident })
+      res.status(200).json({ url: savedUrl.ident })
     } catch (err) {
-      res.status(400).send(err);
+      res.status(400).json({err: err});
     }
   });
 
