@@ -19,4 +19,4 @@ app.use("/api/url", urlRouter)
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true }, () => console.log("Connected to DB"))
 
 //starts the server
-app.listen(3000, () => console.log("Server is running!"));
+app.listen(process.env.PORT, () => console.log("Server is running!"));
